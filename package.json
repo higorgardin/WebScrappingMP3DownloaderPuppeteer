@@ -1,12 +1,30 @@
 {
+  "name": "webscrappingmp3downloaderpuppeteer",
+  "version": "1.0.0",
+  "description": "A project who uses webscrapping for downloading musics!",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higorgardin/WebScrappingMP3DownloaderPuppeteer.git"
+  },
+  "keywords": [
+    "WebScrapping",
+    "Puppeteer",
+    "Node"
+  ],
+  "author": "Higor Gardin",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/higorgardin/WebScrappingMP3DownloaderPuppeteer/issues"
+  },
+  "homepage": "https://github.com/higorgardin/WebScrappingMP3DownloaderPuppeteer#readme",
   "dependencies": {
-    "axios": "^0.24.0",
-    "cli-progress": "^3.9.1",
     "fs": "^0.0.1-security",
-    "http": "^0.0.1-security",
     "https": "^1.0.0",
-    "minimist": "^1.2.5",
-    "puppeteer": "^12.0.0",
-    "stream": "^0.0.2"
+    "puppeteer": "^14.3.0"
   }
 }
