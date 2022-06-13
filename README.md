@@ -25,6 +25,7 @@ git clone https://github.com/higorgardin/WebScrappingMP3DownloaderPuppeteer
 2. Write the name of the musics you want to download in the **musicas/_nome_das_musicas.txt** file
 3. Run it with NPM
 ```
+npm install
 npm start
 ```
 --------------------------------------------------------------------------
@@ -35,6 +36,7 @@ git clone https://github.com/higorgardin/WebScrappingMP3DownloaderPuppeteer
 2. Escreva o nome das músicas que você quer baixar dentro do arquivo **musicas/_nome_das_musicas.txt**
 3. Execute com NPM
 ```
+npm install
 npm start
 ```
 
