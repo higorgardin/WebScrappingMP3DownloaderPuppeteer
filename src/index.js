@@ -78,9 +78,9 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
    * This function iterates through the list of musics
    * calling and awaiting the method of scrapping to find the
    * download page URL of the music
-   * 
-   * @param {string[]} musicList 
-   * @returns 
+   *
+   * @param {string[]} musicList
+   * @returns
    */
   async function getDownloadPageUrlList(musicList) {
     const downloadPageUrlList = [];
@@ -97,8 +97,8 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
    * This function receives the download page URL of the music
    * and returns the link that contains the media file
    * we want to download it (.mp3)
-   * 
-   * @param {string} downloadPageUrl 
+   *
+   * @param {string} downloadPageUrl
    * @returns {string} downloadLink
    */
   async function getDownloadLink(downloadPageUrl) {
@@ -125,8 +125,8 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
    * This function iterates through the list of musics
    * calling and awaiting the method of finding the
    * download link of the media file (.mp3)
-   * 
-   * @param {string[]} musicList 
+   *
+   * @param {string[]} musicList
    * @returns {string[]} downloadLinkList
    */
   async function getDownloadLinkList(musicList) {
@@ -144,8 +144,8 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
    * This function receives the list containing an object
    * with the music name and the download link URL. Then tries
    * download the media file (.mp3)
-   * 
-   * @param {Object[]} musicLinkList 
+   *
+   * @param {Object[]} musicLinkList
    * @returns {void}
    */
   async function downloadMp3List(musicLinkList) {
@@ -183,15 +183,15 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
 
   /**
    * This function just validate the music list and show some messages
-   * 
-   * @param {string[]} musicList 
+   *
+   * @param {string[]} musicList
    */
   function initialValidation(musicList) {
     if (!musicList.length) {
       console.log("\nNão há nenhuma música para ser baixada.");
       process.exit();
     }
-  
+
     console.log("\nMúsicas a serem baixadas:");
     console.log(musicList);
     console.log("\nObtendo links para download. Aguarde... ");
@@ -199,10 +199,10 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
 
   /**
    * This function assigns the music name to the download link found
-   * 
-   * @param {string[]} musicList 
-   * @param {string[]} downloadLinkList 
-   * @returns 
+   *
+   * @param {string[]} musicList
+   * @param {string[]} downloadLinkList
+   * @returns
    */
   function getMusicAssignedWithLinkList(musicList, downloadLinkList) {
     return downloadLinkList.map((item, idx) => {
@@ -216,7 +216,7 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
   /**
    * This function just log some messaages of the musics that won't
    * be downloaded because of invalid or not found download link
-   * 
+   *
    * @param {Object[]} listWontDownload
    * @returns {void}
    */
@@ -241,7 +241,8 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
   const musicList = fs
     .readFileSync(`./${_FOLDER_LOCATION}/${_READ_MUSIC_FILE}`, { encoding: "utf8" })
     .toString()
-    .split("\r\n");
+    .replace("\r","")
+    .split("\n");
 
   initialValidation(musicList);
 
