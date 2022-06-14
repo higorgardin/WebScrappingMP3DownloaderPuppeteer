@@ -1,7 +1,7 @@
 # WebScrappingMP3DownloaderPuppeteer
 
 ## Description / Descrição
-A project who uses webscrapping for downloading musics!
+A project that uses webscrapping for downloading musics!
 
 --------------------------------------------------------------------------
 
