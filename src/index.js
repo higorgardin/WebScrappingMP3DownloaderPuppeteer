@@ -241,7 +241,7 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
   const musicList = fs
     .readFileSync(`./${_FOLDER_LOCATION}/${_READ_MUSIC_FILE}`, { encoding: "utf8" })
     .toString()
-    .replace("\r","")
+    .split('\r').join('')
     .split("\n");
 
   initialValidation(musicList);
