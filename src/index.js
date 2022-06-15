@@ -39,7 +39,7 @@ const _READ_MUSIC_FILE = "_nome_das_musicas.txt";
     }, musicName);
 
     try {
-      await page.waitForSelector("li.list-group-item");
+      await page.waitForSelector("li.list-group-item", { timeout: 2000 });
     } catch (error) {
       await page.close();
       return await getDownloadPageUrl(musicName);
